@@ -1,8 +1,13 @@
 applications:
-- name: Kitura-Starter
+- path: .
   memory: 256M
   instances: 1
-  random-route: true
+  domain: mybluemix.net
+  name: PandaTest1
+  host: PandaTest1
   disk_quota: 1024M
+  services:
+  - PandaTest
+  - availability-monitoring-auto
+  - PandaTest1
   command: Kitura-Starter
-  buildpack: swift_buildpack
